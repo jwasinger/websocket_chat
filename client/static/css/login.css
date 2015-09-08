@@ -1,0 +1,9 @@
+div#app_container
+{
+  vertical-align: middle;
+}
+
+span#create_acct {
+  display: inline-block;
+  margin-top: 3px;
+}

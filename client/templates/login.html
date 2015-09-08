@@ -1,0 +1,34 @@
+{% extends 'site_base.html' %}
+
+{% block head %}
+  <link rel="stylesheet" href="/chat_static/css/login.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <div id="login_container">
+    <form id="user_login_form" 
+          style="width: 200px;"
+          method="post"
+          action="/chat/login">
+      <span>
+        Username:
+        <input name="username" type="text">
+      </span>
+      <span>
+        Password:
+        <input name="password" type="password">
+      </span>
+    </form>
+    <button id='login_btn'>
+      Login
+    </button>
+  </div>
+
+  <span id='create_acct'>
+    Don't Have an account?  <a href='/chat/new_user'>Create one</a> 
+  </span>
+
+  {% if error %}
+    <span class="error">{{error}}</span>
+  {% endif %}
+{% endblock %}

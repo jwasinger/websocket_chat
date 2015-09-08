@@ -1,0 +1,33 @@
+Messages are sent in JSON format between the server and client over a web socket connection.  Message data is used to convey changes in the application state (e.g. user disconnecting from the chat room) and allow user input to propagate to all clients (e.g. a user writes a message).
+
+
+Message Format: 
+--------------
+
+  General Format: {Type: String, Data: object}
+
+  Message Types:
+  --------------
+  
+  ServerError: {Type: 'ServerError', Data: Error String}
+    Description: Message sent by the server to the client when an internal error occurs.
+      If the state of the server is corrupted, this message should be used as a way to signal
+      the client to disconnect immediately.
+
+  UserConnected: {Type: 'Connect', Data: {username: String, user_type: String}}
+    Description: Message sent by the server to the client when a new user connects to the chat room.
+
+  UserDisconnected: {Type: 'Disconnect', Data: {username: String}}
+    Description: Message sent by the server to all clients when a user disconnects from the chat room.
+
+  UserBroadcastChat: {Type: 'UserChat', Data: {username: String, message: String}}
+    Description: Message sent from server to clients when a user has sent a message in the chat room.
+
+  UserChat: {Type: 'UserChat', Data: String}
+    Description: Message sent from client to server when the client writes a message in the chat room.
+    Data: the contents of the message.
+  
+  UserWSAuth: {Type: 'Auth', Data: String}
+    Description: Message sent from client to the server so that the server can associate a client's 
+      websocket connection with their Session
+    Data: The client's SessionID as a string. SessionID is available client-side in a cookie.

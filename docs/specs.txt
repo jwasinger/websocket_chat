@@ -1,0 +1,5 @@
+Chat Client
+-----------
+
+User Types: Admin, Normal User
+User Actions: 

@@ -1,0 +1,7 @@
+Overview:
+  
+  This purpose of this document is to provide a technical overview of the client authentication process.
+
+  1) User authenticates and a session is created. A database entry with the user's IP Address and Username is created.
+
+  2) User establishes a web socket connection to the server.  Using the user's IP address (contained in the web socket connection object), the server is able to link the client by username to the websocket connection object.

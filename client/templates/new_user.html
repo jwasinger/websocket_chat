@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% extends 'site_base.html' %}
+
+{% block head %}
+  <link rel="stylesheet" href="/chat_static/css/new_user.css" type="text/css">
+  <link rel="stylesheet" href="/static/css/chosen.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <form id="new_user_form">
+    <span>
+      Desired username:
+    </span>
+    <input name='username' type='text'>
+
+    <div id='spacer'>&nbsp;</div> 
+
+    <span>
+      Desired password:
+    </span>
+    <input name='password' type='password'>
+
+    <div id='spacer'>&nbsp;</div> 
+
+    <span>
+      Repeat password:
+    </span>
+    <input name='password_verification' type='password'>
+
+    <div id='spacer'>&nbsp;</div> 
+
+    <span>
+      User type:
+    </span>
+    <select data-placeholder="Choose a User Type" id='user_type_select' style='display: none;'>
+      <option selected value='normal'> Normal User </option>
+      <option value='admin'> Administrator </option>
+      <option value='blah'> Blah </option>
+    </select>
+
+    <div id='spacer'>&nbsp;</div> 
+    <span id='submit'>
+      <input name='submit' type='submit' value='Create Account'>
+      <span id='submit_response' style='display: none;'>&nbsp;</span>
+    </span>
+  </form>
+
+
+{% endblock %}

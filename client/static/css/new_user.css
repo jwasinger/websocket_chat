@@ -1,0 +1,52 @@
+form#new_user_form {
+  display: inline-block;
+  min-width: 50%;
+}
+
+
+/*
+form#new_user_form span {
+  margin: 5px;
+  display: block;
+}
+*/
+
+
+/*
+form#new_user_form span *{
+  display: inline-block;
+}
+*/
+
+form#new_user_form input{
+  display: block;
+}
+
+select#user_type_select { 
+  min-width: 170px;
+}
+
+form#new_user_form span#submit input{
+  float: left;
+  display: inline-block;
+}
+
+div#spacer {
+  display: block;
+  min-height: 2px;
+}
+
+form#new_user_form .chosen-container { 
+  display: block;
+}
+
+div#submit_response {
+  min-width: 70%;
+  min-height: 10px;
+  display: inline-block;
+  float: right;
+}
+
+span#submit_response{ 
+  float: right;
+}
