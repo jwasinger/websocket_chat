@@ -6,6 +6,7 @@ var path = require('path');
 var Q = require('q');
 var nunjucks = require('nunjucks');
 var bodyParser = require('body-parser');
+var Session = require('./Session');
 
 var app = express();
 module.exports = app;
@@ -35,8 +36,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //set up session handling with connect-mongo
-var Session = require('./Session');
-Session.Init(app);
+var session = new Session();
+session.Init(app);
 
 //Begin views...
 app.get('/login', function(req, res)

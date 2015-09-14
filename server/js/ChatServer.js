@@ -4,9 +4,9 @@ var _ = require('underscore');
 var Q = require('q');
 var mongoose = require('mongoose');
 
-var Logger = alias.require('@site/Logger').Logger;
-var Session = alias.require('@site/Session');
-var Message = alias.require('@chat_shared/Message');
+var Logger = alias.require('./Logger').Logger;
+var Session = alias.require('./Session');
+var Message = alias.require('@shared/Message');
 
 function ConnectedClient(name, socket)
 {

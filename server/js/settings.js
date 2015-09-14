@@ -1,8 +1,8 @@
 var settings = {
   project_root: '../../',
-  HTTP_PORT: ,
-  WEBSOCKET_PORT: ,
-  DB_NAME: 
+  HTTP_PORT: 3004,
+  WEBSOCKET_PORT: 3005,
+  DB_NAME: 'websocket_chat'
 }
 
 module.exports = settings;

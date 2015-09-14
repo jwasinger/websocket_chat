@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var User = alias.require('@chat/models').User;
-var logger = alias.require('@site/Logger').Logger;
+var User = alias.require('models').User;
+var logger = alias.require('./Logger').Logger;
 
 router.get('/login', function(req, res)
 {

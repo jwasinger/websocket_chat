@@ -18,7 +18,7 @@ var db = require('./DB');
 db.Connect().then(function success()
 {
   console.log('Connected to DB...');
-  var chat_server = new ChatServer(settings.HTTP_PORT);
+  var chat_server = new ChatServer(settings.WEBSOCKET_PORT); //chat server trying to create another http server
   chat_server.Init().then(function success()
   {
     http_server.listen(settings.HTTP_PORT, function()
