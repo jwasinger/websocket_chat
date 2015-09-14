@@ -4,7 +4,6 @@ global.alias = new Alias({
     '@shared': '../../shared'
   }
 });
-alias.require('@shared/Util');
 
 var fs = require('fs');
 var express = require('express');
@@ -19,10 +18,10 @@ var db = require('./DB');
 db.Connect().then(function success()
 {
   console.log('Connected to DB...');
-  var chat_server = new ChatServer(1337);
+  var chat_server = new ChatServer(settings.HTTP_PORT);
   chat_server.Init().then(function success()
   {
-    http_server.listen(80, function()
+    http_server.listen(settings.HTTP_PORT, function()
     {
       console.log('server started');
     });
