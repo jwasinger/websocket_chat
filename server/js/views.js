@@ -7,14 +7,14 @@ router.get('/login', function(req, res)
 {
   debugger;
   if(req.session.username != undefined)
-    res.redirect('/chat/chat_room');
+    res.redirect('/chat_room');
   else
     res.render('login.html');
 });
 
 router.get('/', function(req, res)
 {
-  res.redirect('/chat/login');
+  res.redirect('/');
 });
 
 router.post('/login', function(req, res)
@@ -85,18 +85,13 @@ router.get('/chat_room', function(req, res)
     });
   }
   else
-    res.redirect('/chat/login');
-});
-
-router.get('/test_chat', function(req, res)
-{
-  res.render('test_chat.html');
+    res.redirect('/login');
 });
 
 router.get('/new_user', function(req, res)
 {
   if(req.session.username != undefined)
-    res.redirect('/chat/chat_room');
+    res.redirect('/chat_room');
   else
     res.render('new_user.html');
 });

@@ -16,13 +16,13 @@ for(var i = 0; i < path_elts.length; i++)
 switch(cur_page)
 {
   case 'chat_room':
-    requirejs(['chat/views/chat_room']);
+    requirejs(['views/chat_room']);
     break;
   case 'new_user':
-    requirejs(['chat/views/new_user']);
+    requirejs(['views/new_user']);
     break;
   case 'login':
   case '':
-    requirejs(['chat/views/login']);
+    requirejs(['views/login']);
     break;
 }

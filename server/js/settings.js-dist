@@ -1,5 +1,5 @@
 var settings = {
-  project_root: '../../',
+  PROJECT_ROOT: '../../',
   HTTP_PORT: ,
   WEBSOCKET_PORT: ,
   DB_NAME: 
