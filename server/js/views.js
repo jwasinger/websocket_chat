@@ -19,8 +19,6 @@ router.get('/', function(req, res)
 
 router.post('/login', function(req, res)
 {
-  // TODO: perform authentication and redirect client to error page if it fails
-  debugger;
   if(req.body.username == undefined || 
      req.body.password == undefined)
   {
@@ -78,6 +76,7 @@ router.post('/login', function(req, res)
 
 router.get('/chat_room', function(req, res)
 {
+  debugger;
   if(req.session.username != undefined)
   {
     res.render('chat_room.html',{

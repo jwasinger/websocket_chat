@@ -38,7 +38,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var session = new Session();
 session.Init(app);
 
+var views = require('./views');
+app.use(views);
+
 //Begin views...
+/*
 app.get('/login', function(req, res)
 {
   debugger;
@@ -129,6 +133,7 @@ app.get('/new_user', function(req, res)
   else
     res.render('new_user.html');
 });
+
 app.post('/new_user', function(req, res)
 {
   //create the account and log the user in
@@ -182,3 +187,4 @@ app.post('/logout', function(req, res)
     res.sendStatus(500);
   }
 });
+*/

@@ -1,4 +1,4 @@
-define(['q', 'chat_shared/Settings', 'chat_shared/Error', 'chat_shared/Message', 'chat/app/ChatArea', 'chat/app/ChatSidebar'], function(Q, Settings, Error, Message)
+define(['q', 'shared/Settings', 'shared/Error', 'shared/Message', 'app/ChatArea', 'app/ChatSidebar'], function(Q, Settings, Error, Message)
 {
   return (function ChatClient()
   {

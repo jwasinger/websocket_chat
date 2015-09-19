@@ -3,6 +3,7 @@ requirejs.config({
   baseUrl: '/static/js/lib',
   paths: {
     jquery: '//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min',
+    app: '../app',
     views: '../views',
     bootstrap: 'bootstrap.min',
     shared: '/shared',
@@ -40,13 +41,13 @@ requirejs(['jquery', 'nunjucks', 'q', 'chosen.jquery', 'bootstrap', 'shared/Util
   switch(path_strs[0])
   {
     case 'chat':
-      requirejs(['chat_room']);
+      requirejs(['views/chat_room']);
       break;
     case 'login':
-      requirejs(['login']);
+      requirejs(['views/login']);
       break;
     case 'new_user': 
-      requirejs(['new_user']0;
+      requirejs(['views/new_user']);
       break;
   }
 });

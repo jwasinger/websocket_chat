@@ -1,4 +1,4 @@
-define(['chat/app/ChatClient'], function()
+define(['app/ChatClient'], function()
 {
   $(document).ready(function()
   {
@@ -27,7 +27,7 @@ define(['chat/app/ChatClient'], function()
       }
       else
       {
-        $.post('/chat/login', $(this).serialize(), function(data)
+        $.post('/login', $(this).serialize(), function(data)
         {
           if(data.success == false)
           {
@@ -45,11 +45,11 @@ define(['chat/app/ChatClient'], function()
           }
           else
           {
-            window.location = '/chat/chat_room';
+            window.location = '/chat_room';
           }
         }).fail(function()
         {
-          alert('user login post failed');
+          alert('user login post failed (this is likely an issue on the backend)');
         });
       }
 

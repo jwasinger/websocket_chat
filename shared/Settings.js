@@ -1,4 +1,4 @@
-define(function(['shared/settings'], main_settings)
+define(function()
 {
   var settings_obj = {};
   return {
