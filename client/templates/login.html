@@ -1,24 +1,24 @@
 {% extends 'site_base.html' %}
 
 {% block head %}
-  <link rel="stylesheet" href="/static/css/login.css" type="text/css">
+  <!-- <link rel="stylesheet" href="/static/css/login.css" type="text/css"> -->
 {% endblock %}
 
 {% block content %}
-  <div class='subtle-container'>
+  <div class='subtle-container col-lg-12'>
     <div id="login_container" class="jumbotron col-lg-6 ">
       <form id="user_login_form" class="form-horizontal" 
         method="post"
         action="/chat/login">
         <legend>Login</legend>
         <div class="form-group">
-          <label class='control-label col-lg-2'>Username:</label>
+          <label class='control-label col-lg-2'>Username</label>
           <div class='col-lg-10'>
             <input name="username" type="text" class='form-control'>
           </div>
         </div>
         <div class="form-group">
-          <label class='control-label col-lg-2'>Password:</label>
+          <label class='control-label col-lg-2'>Password</label>
           <div class='col-lg-10'>
             <input class='form-control' name="password" type="password">
           </div>
