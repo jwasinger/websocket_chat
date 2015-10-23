@@ -13,7 +13,7 @@ $(document).ready(function()
     $(this).append(input);
 
     $.ajax({
-      url: '/chat/new_user', 
+      url: '/new_user', 
       type: 'post',
       data: $(this).serialize(),
       success: function(data)
@@ -31,7 +31,7 @@ $(document).ready(function()
           $('#submit_response').css('color', '#009900');
           $('#submit_response').html('Account created');
 
-          window.location = '/chat';
+          window.location = '/chat_room';
         }
         $('#submit_response').css('display', 'inline-block');
       },

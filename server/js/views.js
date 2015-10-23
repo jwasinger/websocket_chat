@@ -5,7 +5,6 @@ var logger = alias.require('./Logger').Logger;
 
 router.get('/login', function(req, res)
 {
-  debugger;
   if(req.session.username != undefined)
     res.redirect('/chat_room');
   else
@@ -76,7 +75,6 @@ router.post('/login', function(req, res)
 
 router.get('/chat_room', function(req, res)
 {
-  debugger;
   if(req.session.username != undefined)
   {
     res.render('chat_room.html',{

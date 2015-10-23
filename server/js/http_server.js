@@ -35,8 +35,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //set up session handling with connect-mongo
-var session = new Session();
-session.Init(app);
+
+Session.CreateMemStore(app);
 
 var views = require('./views');
 app.use(views);

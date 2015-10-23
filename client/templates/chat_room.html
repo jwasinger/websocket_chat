@@ -1,26 +1,17 @@
 {% extends 'site_base.html' %}
-
 {% block head %}
-  <link rel="stylesheet" href="/static/css/chat.css" type="text/css">
 {% endblock %}
 
 {% block content %}
-  <div class='chat_container'>
-    <div id="chat_area" class='col-md-9 col-sm-8 col-xs-8'>
-      <div class="inner">
-        <!-- this div is needed to make messages appear correctly when using tabular display -->
-        <div class="filler"></div> 
-      </div>
+  <div class='jumbotron chat-container'>
+    <div style='width: 100%; height: 100%; background-color: red;'>
+    &nbsp;
     </div>
-    <div id="user_sidebar" class='col-md-3 col-sm-4 col-xs-4'>
-      &nbsp;
+    <div id='chat_area'>
     </div>
+    <div id='user_sidebar'>
+    </div>
+    
+    <button id='logout_btn'/>
   </div>
-  <div id="chat_actions" class='col-md-9 col-sm-8 col-xs-8'>
-    <label>Write something:</label>
-    <label>{{username}}</label>
-    <input type="text" id="chat_input">
-    <button id="chat_send">Send</button>
-  </div>
-  <button id='logout_btn'>Logout</button>
 {% endblock %}

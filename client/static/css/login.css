@@ -1,6 +1,7 @@
 div#app_container
 {
   vertical-align: middle;
+  display: block;
 }
 
 span#create_acct {

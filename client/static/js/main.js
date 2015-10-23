@@ -40,7 +40,7 @@ requirejs(['jquery', 'nunjucks', 'q', 'chosen.jquery', 'bootstrap', 'shared/Util
   
   switch(path_strs[0])
   {
-    case 'chat':
+    case 'chat_room':
       requirejs(['views/chat_room']);
       break;
     case 'login':
