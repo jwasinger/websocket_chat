@@ -1,12 +1,12 @@
 {% extends 'site_base.html' %}
 
 {% block head %}
-  <!-- <link rel="stylesheet" href="/static/css/login.css" type="text/css"> -->
+  <link rel="stylesheet" href="/static/css/login.css" type="text/css">
 {% endblock %}
 
 {% block content %}
-  <div class='subtle-container col-lg-12'>
-    <div id="login_container" class="jumbotron col-lg-6 ">
+  <!-- <div class='subtle-container col-lg-12'> -->
+    <div id="login_container" class="jumbotron">
       <form id="user_login_form" class="form-horizontal" 
         method="post"
         action="/chat/login">
@@ -24,15 +24,16 @@
           </div>
         </div>
       </form>
-      <button id='login_btn'>
-        Login
-      </button>
-    </div>
+      <span class='col-lg-12' id='create_acct'>
+        <button id='login_btn'>
+          Login
+        </button>
+        Don't Have an account?  <a href='/new_user'>Create one</a> or  <a href='/guest_login'>login as a guest</a>.
+      </span>
+    </div> 
 
-    <span class='col-lg-12' id='create_acct'>
-      Don't Have an account?  <a href='/new_user'>Create one</a> or  <a href='/guest_login'>login as a guest</a>.
-    </span>
-  </div>
+
+  <!-- </div> -->
 
   {% if error %}
     <span class="error">{{error}}</span>

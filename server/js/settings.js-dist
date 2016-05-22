@@ -1,8 +1,8 @@
 var settings = {
   PROJECT_ROOT: '../../',
-  HTTP_PORT: ,
-  WEBSOCKET_PORT: ,
-  DB_NAME: 
+  HTTP_PORT: 3000,
+  WEBSOCKET_PORT: 3000,
+  DB_NAME: ""
 }
 
 module.exports = settings;

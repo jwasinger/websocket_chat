@@ -26,12 +26,12 @@ module.exports = function(port)
   this.Init = function()
   {
     var deferred = Q.defer();
-    //delete all entries from UserSession collection
+    
+    //clear stale user session collection in Mongo
     if(mongoose.connection.collections['usersessions'] != undefined)
     {
       mongoose.connection.collections['usersessions'].drop( function(err)
       {
-        console.log('dropped!');
         if(err != 'MongoError: ns not found')
           deferred.resolve();
         else
@@ -61,8 +61,6 @@ module.exports = function(port)
     });
 
     console.log('new cxn');
-
-    //ws.send('new connection');
   });
 
   this.OnNewConnection = function(ws)
@@ -73,7 +71,7 @@ module.exports = function(port)
     {
       if(data.length > 1)
       {
-        logger.log("ERROR: DUPLICATE SESSIONS");
+        logger.log("error: duplicate sessions");
       }
       else
       {
@@ -92,7 +90,7 @@ module.exports = function(port)
     },
     function(error)
     {
-      debugger;
+      console.log(error);
     });
   }
 

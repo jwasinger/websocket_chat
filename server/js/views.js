@@ -31,7 +31,6 @@ router.post('/login', function(req, res)
 
   var users = User.find({username: req.body.username, password: req.body.password}).then(function success(data)
   {
-    debugger;
     if(data.length == 1)
     {
       //only one matching user account found.

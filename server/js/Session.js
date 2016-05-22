@@ -1,5 +1,5 @@
 var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
+var MongoStore = require('connect-mongo/es5')(session);
 var mongoose = require('mongoose');
 var Q = require('q');
 
