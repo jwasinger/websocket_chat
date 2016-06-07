@@ -3,6 +3,10 @@ var router = express.Router();
 var User = alias.require('models').User;
 var logger = alias.require('./Logger').Logger;
 
+var api_routes = require('./api.js');
+
+router.use('/api', api_routes);
+
 router.get('/login', function(req, res)
 {
   if(req.session.username != undefined)
@@ -14,6 +18,10 @@ router.get('/login', function(req, res)
 router.get('/', function(req, res)
 {
   res.redirect('/login');
+});
+
+router.get('/word_frequency', function(req, res) {
+  return res.render('word_frequency.html');
 });
 
 router.post('/login', function(req, res)
@@ -74,6 +82,7 @@ router.post('/login', function(req, res)
 
 router.get('/chat_room', function(req, res)
 {
+  /*
   if(req.session.username != undefined)
   {
     res.render('chat_room.html',{
@@ -82,6 +91,10 @@ router.get('/chat_room', function(req, res)
   }
   else
     res.redirect('/login');
+    */
+    res.render('chat_room.html', {
+      username: "test"
+    });
 });
 
 router.get('/new_user', function(req, res)

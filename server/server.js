@@ -1,7 +1,7 @@
 var Alias = require('require-alias');
 global.alias = new Alias({
   aliases: {
-    '@shared': '../../shared'
+    '@shared': '../shared'
   }
 });
 
@@ -17,7 +17,7 @@ var db = require('./DB');
 
 db.Connect().then(function success()
 {
-  console.log('Connected to DB...');
+  console.log('Connected to Mongo DB...');
   var chat_server = new ChatServer(settings.WEBSOCKET_PORT); //chat server trying to create another http server
   chat_server.Init().then(function success()
   {

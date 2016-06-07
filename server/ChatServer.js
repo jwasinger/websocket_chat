@@ -112,7 +112,6 @@ module.exports = function(port)
 
   this.OnMessage = function(ws, data)
   {
-    debugger;
     if(Message.Validate(data))
     {
       var message_obj = JSON.parse(data);
@@ -130,6 +129,8 @@ module.exports = function(port)
             }
 
             var session_obj = JSON.parse(data[0].session);
+
+            //TODO: index the entry into elasticsearch
 
             if(__chat_history.length >= 20)
               __chat_history.pop();

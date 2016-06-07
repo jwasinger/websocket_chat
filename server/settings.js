@@ -1,7 +1,7 @@
 var settings = {
-  PROJECT_ROOT: '../../',
-  HTTP_PORT: 3004,
-  WEBSOCKET_PORT: 3005,
+  PROJECT_ROOT: '../',
+  HTTP_PORT: 3000,
+  WEBSOCKET_PORT: 3001,
   DB_NAME: 'websocket_chat'
 }
 

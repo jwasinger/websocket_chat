@@ -1,0 +1,30 @@
+#chat_area {
+  flex: 1;
+}
+
+#user_sidebar {
+  border-left: solid 1px #aaa;
+  padding-left: 1em;
+}
+
+#user_sidebar h2 {
+  margin-top: 0px;
+}
+
+#user_sidebar ul {
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+.chat-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-row>* {
+  height: 100%;
+}
+
+.logout-btn {
+  float: right;
+}

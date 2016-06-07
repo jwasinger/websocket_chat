@@ -2,7 +2,9 @@
 <html>
   <head>
     <!--TODO: create a way to dynamically load themes without having to hardcode the *theme*.bootstrap.css file include-->
-    <link rel="stylesheet" href="/static/css/themes/cerulean.bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/lib/bootswatch-dist/bootstrap.min.css" type="text/css">
+    <script src="/static/js/lib/jquery/jquery.min.js"></script>
+    <script src="/static/js/lib/bootswatch-dist/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/static/css/base.css" type="text/css">
     {% block head %}
     {% endblock %}
@@ -15,6 +17,6 @@
     </div>
   </body>
   <footer>
-    <script data-main='/static/js/main.js' src='/static/js/lib/require.js'></script>
+    <script data-main='/static/js/main.js' src='/static/js/lib/requirejs/require.js'></script>
   </footer>
 </html>

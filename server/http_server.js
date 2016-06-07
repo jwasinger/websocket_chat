@@ -21,13 +21,13 @@ var logger = log.Logger;
 
 
 //use Nunjucks for HTML templating
-nunjucks.configure(path.join(settings.PROJECT_ROOT, 'client/templates'), {
+nunjucks.configure(path.join(settings.PROJECT_ROOT, 'templates'), {
   autoescape: true, 
   express: app
 });
 
 //allow files to be served from client static and application shared folders
-app.use('/static',express.static(path.join(settings.PROJECT_ROOT, 'client/static')));
+app.use('/static',express.static(path.join(settings.PROJECT_ROOT, 'static')));
 app.use('/shared', express.static(path.join(settings.PROJECT_ROOT, 'shared')));
 
 //use body parser to be able to parse out form fields from HTTP POST bodies

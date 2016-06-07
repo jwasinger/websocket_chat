@@ -1,6 +1,6 @@
 define(['q', 'shared/Settings', 'shared/Error', 'shared/Message', 'app/ChatArea', 'app/ChatSidebar'], function(Q, Settings, Error, Message)
 {
-  return (function ChatClient()
+  return function ChatClient()
   {
     var ws = null;
     var _this = this;
@@ -97,5 +97,5 @@ define(['q', 'shared/Settings', 'shared/Error', 'shared/Message', 'app/ChatArea'
     _this.OnInvalidMessage = null;
     _this.OnConnectionClosed = null;
     _this.OnServerGreeting = null;
-  });
+  };
 });

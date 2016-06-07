@@ -1,0 +1,45 @@
+{
+  "name": "websocket_chat",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Jared Wasinger <j-wasinger@hotmail.com>"
+  ],
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/jwasinger/websocket_chat",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^3.5.17",
+    "d3-cloud": "^1.2.1",
+    "q": "^2.0.2",
+    "requirejs": "^2.2.0",
+    "nunjucks": "^2.4.2",
+    "bootstrap": "^3.3.6",
+    "bootswatch-dist": "cerulean"
+  },
+  "bowerMove": {
+    "d3": {
+      "*.min.js": "static/js/lib/d3"
+    },
+    "jquery": {
+      "dist/*.min.js": "static/js/lib/jquery"
+    },
+    "requirejs": {
+      "require.js": "static/js/lib/requirejs"
+    },
+    "d3-cloud": {
+      "build/*.js": "static/js/lib/d3-cloud"
+    },
+    "bootswatch-dist": {
+      "css/*.min.css": "static/css/lib/bootswatch-dist",
+      "js/*.min.js": "static/js/lib/bootswatch-dist"
+    }
+  }
+}
