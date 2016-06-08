@@ -1,5 +1,4 @@
-define(['app/ChatClient'], function(ChatClient)
-{
+$(function() {
   var chat_client = new ChatClient();
   //INIT code:
   //1) make sure that the client has necessary browswer capabilities

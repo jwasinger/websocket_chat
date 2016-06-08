@@ -1,8 +1,4 @@
-define(function()
-{
-  return 
-  {
-    this.BAD_FORMAT = 0;
-    this.SERVER_ERROR = 1;
-  };
-});
+var Error = {
+  BAD_FORMAT: 0,
+  SERVER_ERROR: 1
+};

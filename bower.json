@@ -18,8 +18,7 @@
   "dependencies": {
     "d3": "^3.5.17",
     "d3-cloud": "^1.2.1",
-    "q": "^2.0.2",
-    "requirejs": "^2.2.0",
+    "q": "v1",
     "nunjucks": "^2.4.2",
     "bootstrap": "^3.3.6",
     "bootswatch-dist": "cerulean"
@@ -31,8 +30,8 @@
     "jquery": {
       "dist/*.min.js": "static/js/lib/jquery"
     },
-    "requirejs": {
-      "require.js": "static/js/lib/requirejs"
+    "q": {
+      "q.js": "static/js/lib/q"
     },
     "d3-cloud": {
       "build/*.js": "static/js/lib/d3-cloud"
